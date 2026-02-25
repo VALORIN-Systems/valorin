@@ -47,4 +47,4 @@ Be respectful. Be constructive. Focus on technical merit.
 
 ## Questions
 
-Open an issue or reach out at hello@valorin.dev.
+Open an issue or reach out at support@valorinsystems.com.
