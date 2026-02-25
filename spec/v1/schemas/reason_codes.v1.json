@@ -1,0 +1,180 @@
+{
+  "spec_version": "V1",
+  "description": "Authoritative reason code list for Receipt Verification Spec v1. Codes have stable semantics — downstream systems may branch logic on specific codes.",
+  "codes": [
+    {
+      "code": "ERR_MALFORMED_RECEIPT",
+      "severity": "ERROR",
+      "stage": "PARSE",
+      "title": "Receipt JSON parse failed"
+    },
+    {
+      "code": "ERR_UNSUPPORTED_SPEC_VERSION",
+      "severity": "ERROR",
+      "stage": "SPEC",
+      "title": "Spec version not supported"
+    },
+    {
+      "code": "ERR_SCHEMA_VIOLATION",
+      "severity": "ERROR",
+      "stage": "SPEC",
+      "title": "Receipt violates schema constraints"
+    },
+    {
+      "code": "ERR_CANONICALIZATION_FAILED",
+      "severity": "ERROR",
+      "stage": "CANON",
+      "title": "Canonicalization rejected input"
+    },
+    {
+      "code": "ERR_LIMIT_EXCEEDED",
+      "severity": "ERROR",
+      "stage": "LIMITS",
+      "title": "Input exceeds size, depth, or attestation count bounds"
+    },
+    {
+      "code": "ERR_SIGNATURE_INVALID",
+      "severity": "ERROR",
+      "stage": "SIGNATURE",
+      "title": "Ed25519 signature verification failed"
+    },
+    {
+      "code": "ERR_SIGNATURE_ALG_UNSUPPORTED",
+      "severity": "ERROR",
+      "stage": "SIGNATURE",
+      "title": "Signature algorithm not supported in V1"
+    },
+    {
+      "code": "ERR_SIGNED_BYTES_MISMATCH",
+      "severity": "ERROR",
+      "stage": "SIGNATURE",
+      "title": "Signed bytes do not match canonical payload"
+    },
+    {
+      "code": "ERR_COMMITMENT_MISMATCH",
+      "severity": "ERROR",
+      "stage": "COMMITMENTS",
+      "title": "Commitment digest does not match"
+    },
+    {
+      "code": "ERR_COMMITMENT_ALG_UNSUPPORTED",
+      "severity": "ERROR",
+      "stage": "COMMITMENTS",
+      "title": "Commitment algorithm not supported"
+    },
+    {
+      "code": "ERR_ISSUER_UNKNOWN",
+      "severity": "ERROR",
+      "stage": "ISSUER_TRUST",
+      "title": "Issuer or key not found in trust store"
+    },
+    {
+      "code": "WARN_ISSUER_UNVERIFIED_IDENTITY",
+      "severity": "WARN",
+      "stage": "ISSUER_TRUST",
+      "title": "Issuer identity is self-asserted, not verified"
+    },
+    {
+      "code": "WARN_POLICY_NOT_EVALUATED",
+      "severity": "WARN",
+      "stage": "POLICY_EVAL",
+      "title": "No policy provided for evaluation"
+    },
+    {
+      "code": "ERR_POLICY_HASH_MISMATCH",
+      "severity": "ERROR",
+      "stage": "POLICY_EVAL",
+      "title": "Bundle policy_hash does not match supplied policy"
+    },
+    {
+      "code": "ERR_POLICY_REQUIRED_FIELD_MISSING",
+      "severity": "ERROR",
+      "stage": "POLICY_EVAL",
+      "title": "Required claims field missing from attestation"
+    },
+    {
+      "code": "ERR_POLICY_VIOLATION",
+      "severity": "ERROR",
+      "stage": "POLICY_EVAL",
+      "title": "Attestation violates policy constraints"
+    },
+    {
+      "code": "WARN_REVOCATION_NOT_CHECKED",
+      "severity": "WARN",
+      "stage": "REVOCATION",
+      "title": "No revocation set provided"
+    },
+    {
+      "code": "ERR_REVOCATION_SET_SIGNATURE_INVALID",
+      "severity": "ERROR",
+      "stage": "REVOCATION",
+      "title": "Revocation set signature verification failed"
+    },
+    {
+      "code": "WARN_REVOCATION_SET_STALE",
+      "severity": "WARN",
+      "stage": "REVOCATION",
+      "title": "Revocation set past valid_until (fail-open policy)"
+    },
+    {
+      "code": "ERR_REVOCATION_SET_STALE_FAIL_CLOSED",
+      "severity": "ERROR",
+      "stage": "REVOCATION",
+      "title": "Revocation set past valid_until (fail-closed policy)"
+    },
+    {
+      "code": "ERR_ISSUER_KEY_REVOKED",
+      "severity": "ERROR",
+      "stage": "REVOCATION",
+      "title": "Issuer key has been revoked"
+    },
+    {
+      "code": "WARN_REGISTRY_NOT_CHECKED",
+      "severity": "WARN",
+      "stage": "REGISTRY",
+      "title": "No registry snapshot provided"
+    },
+    {
+      "code": "WARN_REGISTRY_UNAVAILABLE",
+      "severity": "WARN",
+      "stage": "REGISTRY",
+      "title": "Registry unavailable (fail-open policy)"
+    },
+    {
+      "code": "ERR_REGISTRY_UNAVAILABLE_FAIL_CLOSED",
+      "severity": "ERROR",
+      "stage": "REGISTRY",
+      "title": "Registry unavailable (fail-closed policy)"
+    },
+    {
+      "code": "ERR_TOOL_NOT_CERTIFIED",
+      "severity": "ERROR",
+      "stage": "REGISTRY",
+      "title": "Tool or version not certified in registry"
+    },
+    {
+      "code": "ERR_REGISTRY_SNAPSHOT_INVALID",
+      "severity": "ERROR",
+      "stage": "REGISTRY",
+      "title": "Registry snapshot signature or format invalid"
+    },
+    {
+      "code": "ERR_CONTEXT_BINDING_MISSING",
+      "severity": "ERROR",
+      "stage": "CONTEXT_BINDING",
+      "title": "Required context binding not present"
+    },
+    {
+      "code": "ERR_CONTEXT_BINDING_MISMATCH",
+      "severity": "ERROR",
+      "stage": "CONTEXT_BINDING",
+      "title": "Context binding does not match expected values"
+    },
+    {
+      "code": "ERR_REPLAY_DETECTED",
+      "severity": "ERROR",
+      "stage": "CONTEXT_BINDING",
+      "title": "Receipt has already been accepted for this context"
+    }
+  ]
+}
